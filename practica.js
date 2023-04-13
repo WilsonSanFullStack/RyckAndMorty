@@ -1,4 +1,4 @@
-let y = 15;
+let y = 60;
 class Queue {
   constructor() {
 
@@ -18,4 +18,5 @@ mayor (y) {
   };
 }
 }
-Queue()
+new Queue()
+console.log(new Queue())
