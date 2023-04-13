@@ -1,4 +1,4 @@
-let y = 60;
+let y = 15;
 class Queue {
   constructor() {
 
@@ -6,9 +6,11 @@ class Queue {
   }
   meter(y) {
     this.array.push(y);
+    
   }
   sacar() {
     this.array.shift();
+    
   }
 mayor (y) {
   if (y > 59) {
@@ -16,3 +18,4 @@ mayor (y) {
   };
 }
 }
+Queue()
