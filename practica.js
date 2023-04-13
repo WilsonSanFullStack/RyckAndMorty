@@ -1,4 +1,3 @@
-let y = 60;
 class Queue {
   constructor() {
 
