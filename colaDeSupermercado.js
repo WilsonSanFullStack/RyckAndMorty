@@ -12,22 +12,20 @@ Queue.prototype.hacerFila = function(persona){
 }
 //metodo de clase Queue compra realizada
 Queue.prototype.compraRealizada = function(){
-    for (personas in this.arry){//por cada elemnto del array  realiza la ejecucion del codigo 
+    
+    let nombre=this.arry[0].nombre;//acceder a las propiedades del obj persona
+    let productos=this.arry[0].productos;
+    this.arry.shift() //elimina el primer elemento del codigo respetando FIFO
+    setTimeout(() => {// cada 5 segundos el codigo sera ejecutado
+    console.log("Ya pasaron 5 segundos "+ nombre +" ha finalizado su compra de"+ productos + " "+nombre +" grita: el MEJOR SUPERMERCADO CHINO DEL MUNDO" ); }, 5000);}
 
-        let nombre=this.arry[0].nombre;//acceder a las propiedades del obj persona
-        let productos=this.arry[0].productos;
 
-    setInterval(() => {// cada 5 segundos el codigo sera ejecutado
-        console.log("Ya pasaron 5 segundos "+ nombre +" ha finalizado su compra de"+ productos + " "+nombre +" grita: el MEJOR SUPERMERCADO CHINO DEL MUNDO" );
-        this.arry.shift() //elimina el primer elemento del codigo respetando FIFO
-
-      }, 5000);
-}}
 //funcion creadora de personas
 function persona (nombre,productos){
     this.nombre=nombre;
-    this.productos=productos.toString().split(",");
-}
+    this.productos=productos.toString().split(",");}
+
+
 let fila=new Queue();
 //creo las personas con el creador de objetos personas
 let persona1= new persona("Erica","pan,jabon,leche,tomates1kg")
@@ -38,4 +36,6 @@ fila.hacerFila(persona1);
 fila.hacerFila(persona2);
 fila.hacerFila(juan);
 //la fila comienza a avanzar
+fila.compraRealizada();
+fila.compraRealizada();
 fila.compraRealizada();
