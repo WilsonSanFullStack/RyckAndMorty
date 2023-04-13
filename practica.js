@@ -16,10 +16,6 @@ class Queue {
 }
 //declaramos una fila usando la clase constructiura Queue
 let fila=new Queue ;
-let menor=10;
-let mujer=26;
-let hombre=42;
-let anciano=70;
 
 fila.meter(menor)
 fila.meter(hombre)
@@ -29,6 +25,3 @@ fila.meter(mujer)
 fila.meter(anciano)
 
 console.log(fila)
-
-
-
