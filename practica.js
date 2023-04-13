@@ -4,15 +4,16 @@ class Queue {
 
     this.array = [];
   }
-  meter(y) {
-    this.array.push(y);
+  meter(persona) {
+    if (persona > 59) {
+        this.array.unshift(persona);}
+        else{
+            this.array.push(persona);}
   }
   sacar() {
     this.array.shift();
-  }
-mayor (y) {
-  if (y > 59) {
-    this.array.unshift(y);
-  };
 }
 }
+
+let fila=new Queue ;
+
