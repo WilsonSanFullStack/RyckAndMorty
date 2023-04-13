@@ -1,0 +1,4 @@
+
+function Bank(){
+    const list = {}
+}
