@@ -27,11 +27,15 @@ function persona (nombre,productos){
 
 
 let fila=new Queue();
+
 //creo las personas con el creador de objetos personas
 let persona1= new persona("Erica","pan,jabon,leche,tomates1kg")
 let persona2= new persona("Ricardo","cigarrillos,maquina de afeitar,leche tomates1kg")
 let juan= new persona("Juan","pizza de microhondas, cerbeza, playera del man City")
+
+
 //coloco las personas dentro de la fila
+
 fila.hacerFila(persona1);
 fila.hacerFila(persona2);
 fila.hacerFila(juan);
