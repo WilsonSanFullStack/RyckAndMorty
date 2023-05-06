@@ -1,0 +1,10 @@
+.search {
+  display: flex;
+  background-color: #8fb0e9;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2px;
+  position: fixed;
+  top: 0;
+  width: 99%;
+}
