@@ -1,17 +1,37 @@
 import "./App.css";
-import React, { useState } from "react";
+import { useState, useEffect} from "react";
 import Cards from "./components/Cards.jsx";
 import NavSearch from "./components/navsearch";
 import axios from "axios";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,  useLocation, useNavigate} from "react-router-dom";
 import About from "./components/About";
 import Detail from "./components/Detail";
 import Form from "./components/Form";
-
+const EMAIL = 'ejemplo@gmail.com';
+const PASSWORD = 'unaPassword1';
+//-----------------------------------------------------------------------
 function App() {
   const [characters, setCharacters] = useState([]);
+  const {pathname} = useLocation();
+
+  const navigate = useNavigate();
+const [access, setAccess] = useState(false);
+
+//------------------------------------------------------------------------
+function login(userData) {
+   if (userData.password === PASSWORD && userData.email === EMAIL) {
+      setAccess(true);
+      navigate('/home');
+   }
+}
+//--------------------------------------------------------------------
+useEffect(() => {
+  !access && navigate('/');
+}, [access]);
+  
   //al estado le puedo poner el nombre que quiera
   //set(nombre del estado) es la funcion encargada de modificar el estado
+  //-------------------------------------------------------------------------------------------
   function onSearch(id) {
     axios(`https://rickandmortyapi.com/api/character/${id}`).then(
       ({ data }) => {
@@ -23,6 +43,7 @@ function App() {
       }
     );
   }
+  //------------------------------------------------------------------------
   const onClose = (id) => {
     setCharacters(
       characters.filter((char) => {
@@ -30,13 +51,13 @@ function App() {
       })
     );
   };
-
+//-------------------------------------------------------------------------
   return (
     <div className="App">
-      <NavSearch onSearch={onSearch} />
+      {pathname !== '/' && <NavSearch onSearch={onSearch} />}
 
       <Routes>
-        <Route path="/" element={<Form/>} />
+        <Route path="/" element={<Form login={login}/>} />
         <Route
           path="/Home"
           element={<Cards characters={characters} onClose={onClose} />}
