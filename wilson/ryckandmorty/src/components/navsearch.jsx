@@ -1,10 +1,21 @@
 import SearchBar from "./SearchBar";
 import styles from "../style/navsear.module.css";
+import { Link } from "react-router-dom";
 
-export default function NavSearch({onSearch}) {
+export default function NavSearch({ onSearch }) {
   return (
     <div className={styles.nav}>
-      <SearchBar onSearch = {onSearch} />
+      <div className={styles.btn}>
+      <Link to="/Home">
+        <button>Home</button>
+      </Link>
+      </div>
+      <div className={styles.btn}>
+      <Link to="/About">
+        <button>About</button>
+      </Link>
+      </div>
+      <SearchBar onSearch={onSearch} />
     </div>
   );
 }

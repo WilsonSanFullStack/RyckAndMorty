@@ -1,7 +1,18 @@
 .nav {
-  width: 100%;
   display: flex;
+  background-color: #8fb0e9;
   align-items: center;
+  justify-content: right;
+  padding: 2px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.btn {
+  display: flex;
   justify-content: center;
-  margin-top: 26px;
+  align-items: center;
+  align-content: center;
+  margin-left: 5px;
 }

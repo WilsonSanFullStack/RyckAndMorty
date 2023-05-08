@@ -1,0 +1,20 @@
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  background-color: blanchedalmond;
+  flex-direction: row;
+}
+.form {
+  width: 20%;
+  background-color: aqua;
+  text-align: left;
+}
+.btn {
+  width: 100%;
+  background-color: aquamarine;
+  margin-top: 5px;
+  text-align: center;
+}

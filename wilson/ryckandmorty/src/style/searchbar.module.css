@@ -1,10 +1,8 @@
 .search {
-  display: flex;
   background-color: #8fb0e9;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: right;
+  justify-content: right;
   padding: 2px;
-  position: fixed;
-  top: 0;
-  width: 99%;
+  margin: 0 10px 0 10px;
 }
+
