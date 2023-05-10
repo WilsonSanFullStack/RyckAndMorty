@@ -17,3 +17,6 @@
 .text {
   width: 100%;
 }
+button {
+  margin-left: 10px;
+}

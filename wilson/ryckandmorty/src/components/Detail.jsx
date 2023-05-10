@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styles from '../style/detail.module.css'
 
-const Detail = () => {
+const Detail = ({onClose}) => {
   const { id } = useParams();
   const [character, setCharacter] = useState({});
 
@@ -32,7 +32,13 @@ const Detail = () => {
         <h2>species: {character.species && character.species} </h2>
         <h2>gender: {character.gender && character.gender} </h2>
         <h2>origin: {character.origin?.name && character.origin?.name} </h2>
-        
+        <button
+          onClick={() => {
+            onClose(id);
+          }}
+          >
+          Cerrar
+        </button>
       </div>
           
     </div>

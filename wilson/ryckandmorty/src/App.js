@@ -7,6 +7,7 @@ import { Route, Routes,  useLocation, useNavigate} from "react-router-dom";
 import About from "./components/About";
 import Detail from "./components/Detail";
 import Form from "./components/Form";
+import { Favoritos } from "./components/Favoritos";
 const EMAIL = 'ejemplo@gmail.com';
 const PASSWORD = 'unaPassword1';
 //-----------------------------------------------------------------------
@@ -63,7 +64,8 @@ useEffect(() => {
           element={<Cards characters={characters} onClose={onClose} />}
         />
         <Route path="/About" element={<About />} />
-        <Route path="/Detail/:id" element={<Detail/>} />
+        <Route path="/Detail/:id" element={<Detail onClose={onClose}/>} />
+        <Route path="/favoritos" element={<Favoritos/>}/>
       </Routes>
     </div>
   );

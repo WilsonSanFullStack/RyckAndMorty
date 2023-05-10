@@ -15,6 +15,11 @@ export default function NavSearch({ onSearch }) {
         <button>About</button>
       </Link>
       </div>
+      <div className={styles.btn}>
+      <Link to="/favoritos">
+        <button>Favoritos</button>
+      </Link>
+      </div>
       <SearchBar onSearch={onSearch} />
     </div>
   );
