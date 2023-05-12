@@ -4,10 +4,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-image: url(../imagen/fondo.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(../imagen/proyectintegration.png);
+  background-repeat: repeat;
+  background-size: 100%;
   padding: 10px;
   margin: 0 50px;
 }

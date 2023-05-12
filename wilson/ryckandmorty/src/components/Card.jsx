@@ -60,8 +60,7 @@ function Card({
 
       <div className={styles.text}>
         <Link to={`/Detail/${id}`}>
-          {" "}
-          <h2 className={styles.decoracion}>name: {name} </h2>{" "}
+          <h2 className={styles.decoracion}>name: {name} </h2>
         </Link>
         <h2>status: {status} </h2>
         <h2>species: {species} </h2>
