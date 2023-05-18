@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styles from '../style/detail.module.css'
 
@@ -32,13 +32,13 @@ const Detail = ({onClose}) => {
         <h2>species: {character.species && character.species} </h2>
         <h2>gender: {character.gender && character.gender} </h2>
         <h2>origin: {character.origin?.name && character.origin?.name} </h2>
-        <button
+        <Link to="/Home"><button
           onClick={() => {
             onClose(id);
           }}
           >
           Cerrar
-        </button>
+        </button></Link>
       </div>
           
     </div>
