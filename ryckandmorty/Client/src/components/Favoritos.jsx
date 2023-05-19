@@ -37,8 +37,8 @@ export function Favoritos() {
         <option value="unknown">unknown</option>
       </select>
       <div className={styles.contenedorCard}>
-        {misFavoritos.map(
-          ({ name, onClose, status, species, gender, origin, image, id }) => {
+        {misFavoritos?.map(
+          ({ name, status, species, gender, origin, image, id }) => {
             return (
               <Card
                 key={id}
@@ -49,7 +49,6 @@ export function Favoritos() {
                 gender={gender}
                 origin={origin.name}
                 image={image}
-                onClose={onClose}
               />
             );
           }
