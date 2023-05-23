@@ -1,7 +1,7 @@
 .about {
   width: 99%;
   height: 100vh;
-  background-image: url(../imagen/Fondo_Henry-1.jpg);
+  background-image: url(../../public/imagen/Fondo_Henry-1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

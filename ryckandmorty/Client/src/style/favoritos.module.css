@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-image: url(../imagen/proyectintegration.png);
+  background-image: url(../../public/imagen/proyectintegration.png);
   background-repeat: repeat;
   background-size: 100%;
   padding: 10px;
