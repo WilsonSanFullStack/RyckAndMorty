@@ -1,0 +1,22 @@
+.global {
+  background-image: url(../../public/imagen/fondoDetail.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cardOne {
+  border: solid 5px rgb(60, 100, 120);
+  margin: auto;
+  padding: 5px;
+  width: 50%;
+  font-size: 0.7em;
+  background-color: rgba(6, 171, 112, 0.91);
+  color: black;
+  justify-content: center;
+}
+.divimage {
+  width: 100%;
+}
+.text {
+  width: 100%;
+}

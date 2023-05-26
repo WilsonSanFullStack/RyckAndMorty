@@ -1,0 +1,29 @@
+.about {
+  width: 99%;
+  height: 94vh;
+  background-image: url(../../public/imagen/fondoAbout.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 34px;
+  margin: 5px;
+}
+
+.containerFotos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  
+}
+.fotos {
+  display: flex;
+  margin: 5px;
+  padding: 15px;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

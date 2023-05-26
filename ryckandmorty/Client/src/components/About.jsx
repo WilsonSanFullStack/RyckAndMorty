@@ -1,4 +1,4 @@
-import styles from "../style/about.module.css";
+import styles from "../styles/about.module.css";
 const About = () => {
   return (
     <div className={styles.about}>
@@ -14,6 +14,7 @@ const About = () => {
       </p>
 
       <h4>Les dejo donde contactarme:</h4>
+      
       <div className={styles.containerFotos}>
         <div className={styles.fotos}>
           <a href="https://github.com/ryuksan">

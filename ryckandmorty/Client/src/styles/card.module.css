@@ -1,0 +1,22 @@
+.cardOne {
+  border: solid 5px #fff;
+  margin: 1px;
+  padding: 5px;
+  font-size: 8px;
+  min-width: 220px;
+  max-width: 220px;
+  background-color: rgba(6, 171, 212, 0.8);
+  color: black;
+}
+.image {
+  width: 100%;
+}
+.divimage {
+  width: 100%;
+}
+.text {
+  width: 100%;
+}
+button {
+  margin-left: 10px;
+}

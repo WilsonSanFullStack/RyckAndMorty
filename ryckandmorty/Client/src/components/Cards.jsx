@@ -1,27 +1,28 @@
 import Card from "./Card";
-import styles from "../style/cards.module.css";
+import styles from "../styles/cards.module.css";
 
-export default function Cards({ characters, onClose }) {
+const Cards = ({ characters, onClose }) => {
   return (
     <div className={styles.contenedorCard}>
       {characters.map(
-        ({ name, status, species, gender, origin, image, id }) => {
+        ({ id, name, species, gender, image, origin, status }) => {
           return (
             <Card
               key={id}
               id={id}
               name={name}
-              status={status}
               species={species}
               gender={gender}
-              origin={origin.name}
               image={image}
+              origin={origin.name}
+              status={status}
               onClose={onClose}
             />
           );
         }
       )}
-      ,
     </div>
   );
-}
+};
+
+export default Cards;

@@ -1,7 +1,8 @@
 import axios from "axios";
-import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import styles from '../style/detail.module.css'
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import styles from "../styles/detail.module.css";
 
 const Detail = () => {
   const { id } = useParams();
@@ -21,21 +22,25 @@ const Detail = () => {
   }, [id]);
 
   return (
+    <div className={styles.global}>
     <div className={styles.cardOne}>
       <div className={styles.divimage}>
-        <img className={styles.image} src={character.image && character.image} alt="" />
+        <img src={character.image && character.image} alt="" />
       </div>
-        
+      
       <div className={styles.text}>
-        <h2 className={styles.decoracion}>name: {character.name && character.name} </h2>
-        <h2>status: {character.status && character.status} </h2>
-        <h2>species: {character.species && character.species} </h2>
-        <h2>gender: {character.gender && character.gender} </h2>
-        <h2>origin: {character.origin?.name && character.origin?.name} </h2>
-       
+        <h1>Name: "{character.name && character.name}"</h1>
+        <h1>Status: "{character.status && character.status}"</h1>
+        <h1>Species: "{character.species && character.species}"</h1>
+        <h1>Gender: "{character.gender && character.gender}"</h1>
+        <h1>Origins: "{character.origin?.name && character.origin?.name}"</h1>
       </div>
-          
+        <Link to="/home">
+          <button>CERRAR</button>
+        </Link>
+    </div>
     </div>
   );
 };
+
 export default Detail;

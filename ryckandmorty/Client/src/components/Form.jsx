@@ -1,20 +1,20 @@
-import styles from "../style/Form.module.css";
+import styles from "../styles/Forms.module.css";
 import { useState } from "react";
 import validation from "./validation";
 
-const Form = ({ login }) => {
+const Forms = ({ login }) => {
   const [userData, setUserData] = useState({
     email: "",
     password: "",
   });
 
-  const [errors, setErrors] = useState();
+  const [errors, setErrors] = useState({});
 
-  const handleForms = (event) => {
+  const handleChange = (event) => {
     setErrors(
-      validation({ ...userData, [event.target.name]: event.target.value }),
-      setUserData({ ...userData,[event.target.name]: event.target.value,})
+      validation({ ...userData, [event.target.name]: event.target.value })
     );
+    setUserData({ ...userData, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (event) => {
@@ -23,47 +23,37 @@ const Form = ({ login }) => {
   };
 
   return (
-    <div className={styles.contenedor}>
-      <form action="" onSubmit={handleForms} className={styles.form}>
-        <div>
-          <label htmlFor="email" className={styles.label}>
-            Email:
-            
-          </label>
+    <div className={styles.global}>
+      <form  className={styles.contenedor}>
+        <div className={styles.form} >
+          <label htmlFor="email"><b>Email: </b> </label>
           <input
-              onChange={handleForms}
-              value={userData.email}
-              name='email'
-              type="text"
-              placeholder="Ingrese su email"
-            />
-          {errors?.e1 ? (
-          <p>{errors?.e1}</p>
-        ) : errors?.e2 ? (
-          <p>{errors?.e2}</p>
-        ) : (
-          <p>{errors?.e3}</p>
-        )}
+            onChange={handleChange}
+            value={userData.email}
+            type="text"
+            name="email"
+          />
+          {errors.e1 ? (
+            <p><b>{errors.e1}</b></p>
+          ) : errors.e2 ? (
+            <p><b>{errors.e2}</b></p>
+          ) : (
+            <p><b>{errors.e3}</b></p>
+          )}
         </div>
-        
-
-        <div>
-          <label htmlFor="password" className={styles.label}>
-            Password:
-            <input
-              onChange={handleForms}
-              value={userData.password}
-              name="password"
-              type="text"
-              placeholder="Escriba su Password"
-            />
-          </label>
+        <div className={styles.form}>
+          <label htmlFor="password"><b>Password: </b></label>
+          <input
+            onChange={handleChange}
+            value={userData.password}
+            type="password"
+            name="password"
+          />
         </div>
-        {errors?.p1 ? <p>{errors?.p1}</p> : <p>{errors?.p2}</p>}
-
+        {errors.p1 ? <p><b>{errors.p1}</b></p> : <p><b>{errors.p2}</b></p>}
         <div className={styles.btn}>
-          <button type="submit" onClick={handleSubmit}>
-            Submit
+          <button onClick={handleSubmit} type="submit">
+            <b>SUBMIT</b>
           </button>
         </div>
       </form>
@@ -71,4 +61,5 @@ const Form = ({ login }) => {
   );
 };
 
-export default Form;
+export default Forms;
+//

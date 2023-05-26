@@ -1,43 +1,42 @@
 const initialState = {
-  misFavoritos: [],
-  allCharacters: [],
+  myFavorites: [],
+  allCharactersFav: [],
 };
 
-const reducer = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_FAV":
       return {
         ...state,
-        misFavoritos: [...state.allCharacters, action.payload],
-        allCharacters: [...state.allCharacters, action.payload],
+        myFavorites: action.payload,
+        allCharactersFav: action.payload,
       };
     case "REMOVE_FAV":
       return {
         ...state,
-        misFavoritos: state.misFavoritos.filter(
-          (char) => char.id !== action.payload
-        ),
+        myFavorites: action.payload,
+        allCharactersFav: action.payload
+
       };
-    //se hace sobre los personajes que estan en favoritos
-    case "FILTER":
-      const allCharactersFiltered = state.allCharacters.filter(
-        (char) => char.gender === action.payload
-      );
-      return {
-        ...state,
-        misFavoritos: allCharactersFiltered,
-      };
-    case "ORDER":
-      const allCharactersCopy = [...state.allCharacters];
-      return {
-        ...state,
-        misFavoritos: action.payload === 'A'
-        ? allCharactersCopy.sort((a, b)=> a.id - b.id)
-        : allCharactersCopy.sort((a, b)=> b.id - a.id),
-       };
+      case "FILTER":
+        const allCharactersFiltered = state.allCharactersFav.filter((char)=> char.gender === action.payload);
+        return {
+          ...state,
+          myFavorites: allCharactersFiltered
+        }
+        case  "ORDER":
+          const allCharactersFavCopy = [...state.allCharactersFav];
+          return{
+            ...state,
+            myFavorites: 
+            action.payload === "A"
+            ? allCharactersFavCopy.sort((a, b) => a.id - b.id)
+            : allCharactersFavCopy.sort((a, b) => b.id - a.id)
+          }
+        
+
     default:
       return { ...state };
   }
 };
 
-export default reducer;
