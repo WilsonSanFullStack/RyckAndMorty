@@ -36,7 +36,7 @@ const Detail = () => {
         <h1>Origins: "{character.origin?.name && character.origin?.name}"</h1>
       </div>
         <Link to="/home">
-          <button>CERRAR</button>
+          <button>HOME</button>
         </Link>
     </div>
     </div>

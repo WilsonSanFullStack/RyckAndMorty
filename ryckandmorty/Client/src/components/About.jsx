@@ -14,7 +14,6 @@ const About = () => {
       </p>
 
       <h4>Les dejo donde contactarme:</h4>
-      
       <div className={styles.containerFotos}>
         <div className={styles.fotos}>
           <a href="https://github.com/ryuksan">

@@ -27,7 +27,8 @@ function App() {
       setAccess(access);
       access && navigate("/home");
     } catch (error) {
-      console.log(error.message);
+      alert(error.message);
+      //console.log(error.message);
     }
   }
 
@@ -47,7 +48,8 @@ function App() {
         alert("¡No hay personajes con este ID!");
       }
     } catch (error) {
-      console.log(error);
+      //alert(`"¡No hay personajes con este ID!" ${error}`);
+      console.log(error.message);
     }
   }
 
